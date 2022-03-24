@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs-extra');
 
 const web3 = new Web3(process.env.RPC_URL);
-const privateKey = process.env.ACCOUNT_PRIVATE_KEY;
+const privateKey = process.env.ACCOUNT_PRIVATE_KEY.substring(2);
 const account = web3.eth.accounts.privateKeyToAccount(privateKey);
 
 function getAbi(contractName) {
