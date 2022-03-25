@@ -30,7 +30,7 @@ async function sendSignedTransaction(txOptions) {
     gasLimit: "0x47b7600", // max number of gas units the tx is allowed to use
     ...txOptions
   }
-  let common = ethereumjs_common.forCustomChain ('mainnet', { networkId: 10, chainId: 10, name: 'fpt-lab' }, 'istanbul');
+  let common = ethereumjs_common.forCustomChain ('mainnet', { networkId: parseInt(process.env.NETWORK_ID), chainId: parseInt(process.env.NETWORK_ID), name: 'fpt-lab' }, 'istanbul');
   let tx = new Tx(rawTxOptions, { common: common });
 
   tx.sign(Buffer.from(privateKey, 'hex'));
