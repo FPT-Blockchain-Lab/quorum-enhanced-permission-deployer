@@ -74,7 +74,7 @@ function exportPermissionConfig(txs) {
     "nwAdminRole" : "ADMIN",
     "orgAdminRole" : "ORGADMIN",
     "accounts":[account.address],
-    "subOrgBreadth" : 3,
+    "subOrgBreadth" : 4,
     "subOrgDepth" : 4
   }
 
